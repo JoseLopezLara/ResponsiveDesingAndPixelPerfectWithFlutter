@@ -11,7 +11,7 @@ You can follow the sequential commits to make a responsive app using:
     - Spread Operator.
     - A little mathematics.
 
-Seeyou latter.
+See you latter.
 
 Dev: José López Lara
 Email: jose.lopez.lara.cto@gmail.com
