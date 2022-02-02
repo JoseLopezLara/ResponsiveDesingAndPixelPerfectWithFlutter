@@ -33,7 +33,19 @@ class ProfileScreen extends StatelessWidget {
                   SizedBox(height: 40),
                   Row(
                     children: [
-                      Image.asset(imagePath + 'avatar.png')
+                      Image.asset(imagePath + 'avatar.png'),
+                      for (var stats in userStats)...[
+                        SizedBox(width: stats.leftPaddingFactor,),
+                        Column(
+                          children: [
+                            Text(stats.value.toString(),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5),
+                            ),
+                            Text(stats.name, style: TextStyle(fontSize: 14),
+                            )
+                          ],
+                        )
+                      ]
                     ],
                   )
                 ],
@@ -66,12 +78,12 @@ final userStats = [
     name: 'post',
   ),
   UserStats(
-    leftPaddingFactor: 41,
+    leftPaddingFactor: 42,
     value: 600,
     name: 'follower',
   ),
   UserStats(
-    leftPaddingFactor: 24,
+    leftPaddingFactor: 25,
     value: 500,
     name: 'following',
   ),
